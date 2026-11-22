@@ -9,7 +9,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
         <span className="h-px w-6 bg-brand-2/70" />
         {eyebrow}
       </span>
-      <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-txt sm:text-4xl">
         {title}
       </h2>
       {description ? (

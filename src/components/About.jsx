@@ -45,7 +45,7 @@ export default function About() {
                   <Icon name="code" className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">{profile.name}</p>
+                  <p className="text-sm font-semibold text-txt">{profile.name}</p>
                   <p className="font-mono text-[11px] text-slate-500">
                     {profile.role} · {profile.location}
                   </p>

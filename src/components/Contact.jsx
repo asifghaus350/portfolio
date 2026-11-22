@@ -106,7 +106,7 @@ export default function Contact() {
                           href={s.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="group flex items-center gap-2.5 rounded-md py-1.5 text-sm text-slate-400 transition hover:text-white"
+                          className="group flex items-center gap-2.5 rounded-md py-1.5 text-sm text-slate-400 transition hover:text-txt"
                         >
                           <Icon
                             name={s.icon}

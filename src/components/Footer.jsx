@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <a href="#top" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand to-brand-2 text-sm font-bold text-ink">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#a78bfa] to-[#22d3ee] text-sm font-bold text-on-accent">
                 {profile.shortName}
               </span>
               <span className="text-sm font-semibold text-slate-200">
@@ -32,7 +32,7 @@ export default function Footer() {
                   <li key={l.href}>
                     <a
                       href={l.href}
-                      className="text-[13px] text-slate-400 transition hover:text-white"
+                      className="text-[13px] text-slate-400 transition hover:text-txt"
                     >
                       {l.label}
                     </a>
@@ -52,7 +52,7 @@ export default function Footer() {
                       href={s.href}
                       target={s.href.startsWith('http') ? '_blank' : undefined}
                       rel="noreferrer"
-                      className="text-[13px] text-slate-400 transition hover:text-white"
+                      className="text-[13px] text-slate-400 transition hover:text-txt"
                     >
                       {s.label}
                     </a>

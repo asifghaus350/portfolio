@@ -22,7 +22,7 @@ export default function Experience() {
 
               <Reveal delay={i * 100}>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h3 className="font-display text-lg font-semibold text-white">
+                  <h3 className="font-display text-lg font-semibold text-txt">
                     {job.role}
                   </h3>
                   <span className="text-sm text-brand-2">{job.company}</span>

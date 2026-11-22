@@ -10,18 +10,24 @@ function ProjectCard({ project, index }) {
     <Reveal delay={index * 90} className={featured ? 'sm:col-span-1' : ''}>
       <article className="card group flex h-full flex-col overflow-hidden p-6">
         <div className="mb-5 flex items-start justify-between gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-line bg-white/[0.03] text-brand-2 transition group-hover:border-brand/50 group-hover:text-white">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-line bg-white/[0.03] text-brand-2 transition group-hover:border-brand/50 group-hover:text-txt">
             <Icon name="code" className="h-[18px] w-[18px]" />
           </span>
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-slate-600">{project.year}</span>
+            {featured ? (
+              <span className="rounded bg-gradient-to-r from-[#a78bfa] to-[#22d3ee] px-1.5 py-0.5 font-mono text-[9px] font-bold tracking-wider text-on-accent uppercase">
+                Featured
+              </span>
+            ) : (
+              <span className="font-mono text-[11px] text-slate-600">{project.year}</span>
+            )}
             {project.repo && project.repo !== '#' ? (
               <a
                 href={project.repo}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${project.title} source code`}
-                className="grid h-8 w-8 place-items-center rounded-md text-slate-500 transition hover:bg-white/5 hover:text-white"
+                className="grid h-8 w-8 place-items-center rounded-md text-slate-500 transition hover:bg-white/5 hover:text-txt"
               >
                 <Icon name="github" className="h-4 w-4" />
               </a>
@@ -32,7 +38,7 @@ function ProjectCard({ project, index }) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${project.title} live site`}
-                className="grid h-8 w-8 place-items-center rounded-md text-slate-500 transition hover:bg-white/5 hover:text-white"
+                className="grid h-8 w-8 place-items-center rounded-md text-slate-500 transition hover:bg-white/5 hover:text-txt"
               >
                 <Icon name="external" className="h-4 w-4" />
               </a>
@@ -40,7 +46,7 @@ function ProjectCard({ project, index }) {
           </div>
         </div>
 
-        <h3 className="font-display text-lg font-semibold text-white">
+        <h3 className="font-display text-lg font-semibold text-txt">
           {project.href && project.href !== '#' ? (
             <a href={project.href} target="_blank" rel="noreferrer" className="hover:text-brand-2">
               {project.title}

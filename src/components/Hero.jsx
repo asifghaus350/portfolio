@@ -66,7 +66,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-txt sm:text-5xl lg:text-6xl">
               Hi, I&apos;m{' '}
               <span className="gradient-text">{profile.name}</span>
             </h1>
@@ -108,7 +108,7 @@ export default function Hero() {
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel="noreferrer"
                   aria-label={s.label}
-                  className="grid h-10 w-10 place-items-center rounded-lg border border-line bg-white/[0.02] text-slate-400 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-white"
+                  className="grid h-10 w-10 place-items-center rounded-lg border border-line bg-white/[0.02] text-slate-400 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-txt"
                 >
                   <Icon name={s.icon} className="h-[18px] w-[18px]" />
                 </a>
@@ -174,7 +174,7 @@ export default function Hero() {
           <dl className="grid grid-cols-3 divide-x divide-line rounded-2xl border border-line bg-white/[0.02]">
             {stats.map((s) => (
               <div key={s.label} className="px-4 py-6 text-center sm:px-6">
-                <dt className="font-display text-2xl font-bold text-white sm:text-3xl">
+                <dt className="font-display text-2xl font-bold text-txt sm:text-3xl">
                   {s.value}
                 </dt>
                 <dd className="mt-1 text-[11px] leading-snug text-slate-500 sm:text-xs">

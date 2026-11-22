@@ -25,7 +25,7 @@ export default function Skills() {
             >
               <div className="card h-full p-6">
                 <div className="mb-5 flex items-center justify-between">
-                  <h3 className="font-display text-base font-semibold text-white">
+                  <h3 className="font-display text-base font-semibold text-txt">
                     {group.group}
                   </h3>
                   <span className="font-mono text-[11px] text-slate-600">

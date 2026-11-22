@@ -70,6 +70,7 @@ vercel
 
 ## Notes
 
+- **Dark + Light mode**: navbar ke right mein moon/sun toggle. Choice `localStorage` mein save hoti hai; pehli baar system preference use hoti hai. Reload par flash nahi aata (theme paint se pehle set hota hai).
 - `prefers-reduced-motion` respect hota hai — animations khud band ho jati hain.
-- Keyboard focus states aur skip-link included hain.
+- Keyboard focus states, skip-link aur floating "back to top" included hain.
 - Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (labels) — Google Fonts se.

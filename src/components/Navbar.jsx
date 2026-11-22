@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { navLinks, profile } from '../data/portfolio.js'
 import Icon from './Icons.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -58,7 +59,7 @@ export default function Navbar() {
           className="group flex items-center gap-2.5"
           aria-label="Home"
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand to-brand-2 text-sm font-bold text-ink shadow-lg shadow-brand/30">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[#a78bfa] to-[#22d3ee] text-sm font-bold text-on-accent shadow-lg shadow-brand/30">
             {profile.shortName}
           </span>
           <span className="hidden text-sm font-semibold tracking-tight text-slate-200 sm:block">
@@ -73,8 +74,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`rounded-lg px-3.5 py-2 text-sm transition-colors ${
                   active === link.href
-                    ? 'text-white'
-                    : 'text-slate-400 hover:text-slate-100'
+                    ? 'bg-white/[0.07] text-txt shadow-sm ring-1 ring-line'
+                    : 'text-slate-400 hover:bg-white/[0.04] hover:text-txt'
                 }`}
               >
                 {link.label}
@@ -83,7 +84,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2.5 md:flex">
+          <ThemeToggle />
           <a href="#contact" className="btn btn-primary !px-4 !py-2.5 text-sm">
             Let&apos;s talk
             <Icon name="arrowRight" className="h-4 w-4" />
@@ -113,17 +115,18 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-3 text-base text-slate-300 hover:bg-white/5 hover:text-white"
+                className="block rounded-lg px-3 py-3 text-base text-slate-300 hover:bg-white/5 hover:text-txt"
               >
                 {link.label}
               </a>
             </li>
           ))}
-          <li className="pt-2">
+          <li className="mt-2 border-t border-line pt-2">
+            <ThemeToggle withLabel />
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="btn btn-primary w-full"
+              className="btn btn-primary mt-2 w-full"
             >
               Let&apos;s talk
               <Icon name="arrowRight" className="h-4 w-4" />
