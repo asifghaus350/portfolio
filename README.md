@@ -1,5 +1,7 @@
 # Portfolio
 
+**Live:** https://asifghaus350.github.io/portfolio/
+
 Personal portfolio site — React 19 + Vite 7 + Tailwind CSS v4. Dark, animated, single page.
 
 ```
@@ -66,7 +68,7 @@ vercel
 
 **Netlify** — build command `npm run build`, publish directory `dist`.
 
-**GitHub Pages** — `vite.config.js` mein `base: '/repo-name/'` set karein, phir `dist/` ko `gh-pages` branch pe push karein.
+**GitHub Pages** — already setup hai ✅. `.github/workflows/deploy.yml` har `main` push par build karke Pages pe deploy karta hai. `vite.config.js` production build ke liye `base: '/portfolio/'` set karta hai.
 
 ## Notes
 
