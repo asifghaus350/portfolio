@@ -16,7 +16,13 @@ export default function Skills() {
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {skills.map((group, i) => (
-            <Reveal key={group.group} delay={i * 90}>
+            <Reveal
+              key={group.group}
+              delay={i * 90}
+              className={
+                i === skills.length - 1 && skills.length % 2 === 1 ? 'sm:col-span-2' : ''
+              }
+            >
               <div className="card h-full p-6">
                 <div className="mb-5 flex items-center justify-between">
                   <h3 className="font-display text-base font-semibold text-white">

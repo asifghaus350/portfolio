@@ -1,4 +1,4 @@
-import { about, education, profile } from '../data/portfolio.js'
+import { about, certifications, education, languages, profile } from '../data/portfolio.js'
 import Icon from './Icons.jsx'
 import Reveal from './Reveal.jsx'
 import SectionHeading from './SectionHeading.jsx'
@@ -62,6 +62,11 @@ export default function About() {
                     <span className="block text-xs text-slate-500">
                       {education.school} · {education.period}
                     </span>
+                    {education.detail ? (
+                      <span className="mt-0.5 block text-xs text-slate-500">
+                        {education.detail}
+                      </span>
+                    ) : null}
                   </dd>
                 </div>
                 <div>
@@ -83,6 +88,41 @@ export default function About() {
                     </a>
                   </dd>
                 </div>
+                <div>
+                  <dt className="font-mono text-[11px] tracking-wider text-slate-500 uppercase">
+                    Phone
+                  </dt>
+                  <dd className="mt-1">
+                    <a
+                      href={`tel:${profile.phone.replace(/\s/g, '')}`}
+                      className="text-slate-300 underline-offset-4 hover:text-brand-2 hover:underline"
+                    >
+                      {profile.phone}
+                    </a>
+                  </dd>
+                </div>
+                {certifications?.length ? (
+                  <div>
+                    <dt className="font-mono text-[11px] tracking-wider text-slate-500 uppercase">
+                      Certifications
+                    </dt>
+                    <dd className="mt-1.5 flex flex-wrap gap-1.5">
+                      {certifications.map((c) => (
+                        <span key={c.label} className="chip !text-[10.5px]">
+                          {c.label}
+                        </span>
+                      ))}
+                    </dd>
+                  </div>
+                ) : null}
+                {languages?.length ? (
+                  <div>
+                    <dt className="font-mono text-[11px] tracking-wider text-slate-500 uppercase">
+                      Languages
+                    </dt>
+                    <dd className="mt-1 text-slate-300">{languages.join(' · ')}</dd>
+                  </div>
+                ) : null}
               </dl>
 
               <a

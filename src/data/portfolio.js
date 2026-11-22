@@ -1,135 +1,184 @@
 /**
  * ============================================================
  *  SIRF YEH FILE EDIT KAREIN — poori website ka content yahin hai.
- *  Naam, links, projects, skills sab isi file se aate hain.
+ *  Source: ASIF GHAUS-RESUME.pdf
  * ============================================================
  */
 
 export const profile = {
-  name: 'Your Name',
+  name: 'Mohammad Asif',
   // Navbar/logo mein chhota naam
-  shortName: 'YN',
-  role: 'Full-Stack Developer',
+  shortName: 'MA',
+  role: 'Backend / Full Stack Developer',
   // Hero ke neeche type hone wali lines
   roles: [
-    'Full-Stack Developer',
-    'React & Node.js Engineer',
-    'UI-focused Problem Solver',
+    'Backend Developer',
+    'Full Stack Developer',
+    'Node.js & NestJS Engineer',
+    'React Developer',
   ],
   tagline:
-    'I build fast, accessible web applications — from database schema to the last pixel of the interface.',
-  location: 'Pakistan',
-  availability: 'Open to freelance & full-time roles',
-  email: 'you@example.com',
+    'I build reliable REST APIs and full-stack products — NestJS, TypeScript and PostgreSQL on the server, React and Tailwind on the screen.',
+  location: 'Hyderabad, India',
+  availability: 'Open to Backend & Full Stack roles',
+  email: 'asifghaus350@gmail.com',
+  phone: '+91 84394 51992',
   resumeUrl: '/resume.pdf',
 }
 
 export const socials = [
-  { label: 'GitHub', href: 'https://github.com/your-username', icon: 'github' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/your-username', icon: 'linkedin' },
-  { label: 'X', href: 'https://x.com/your-username', icon: 'x' },
-  { label: 'Email', href: 'mailto:you@example.com', icon: 'mail' },
+  { label: 'GitHub', href: 'https://github.com/asifghaus350', icon: 'github' },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/asif-ghaus-75aa11298/',
+    icon: 'linkedin',
+  },
+  { label: 'Email', href: 'mailto:asifghaus350@gmail.com', icon: 'mail' },
 ]
 
 export const stats = [
-  { value: '3+', label: 'Years building for the web' },
-  { value: '12+', label: 'Projects shipped' },
-  { value: '5', label: 'Production apps live' },
+  { value: '1+', label: 'Year of professional experience' },
+  { value: '900+', label: 'Automated tests written' },
+  { value: '3', label: 'Shipped full-stack projects' },
 ]
 
 export const about = {
   paragraphs: [
-    'I am a full-stack developer who enjoys the messy middle of building products: designing the data model, wiring the API, then polishing the interface until it feels obvious to use.',
-    'Most of my work is React on the front end and Node.js with a relational database behind it. I care about accessibility, sensible state management, and shipping small increments instead of big-bang rewrites.',
-    'When I am not coding I am usually reading about systems design, breaking my own layouts at 320px width, or documenting what I learned in a short write-up.',
+    'I am a software developer with around a year of experience building backend and full-stack applications in JavaScript, TypeScript and Java. Right now I am an Associate Software Developer at Alt-Switch Software Services, where I develop and fix REST APIs for an ERP and wholesale distribution platform using NestJS, TypeORM and PostgreSQL.',
+    'Most of my day is spent on the parts that users never see but always feel: price-list lifecycles that must keep the correct status, search endpoints that break when no sort column is passed, and shipping notices that should show a readable payment term instead of an internal ID.',
+    'I like tests that catch real regressions, so I write them — 600+ API tests with Jest and Supertest, 330+ frontend tests with Vitest, and Playwright runs for the browser flows. Outside of work I build full-stack side projects to practise the same discipline end to end.',
   ],
   highlights: [
-    'React 19, Vite, Tailwind CSS',
-    'Node.js, Express, REST APIs',
-    'PostgreSQL, MongoDB, Firebase',
-    'Git, Docker, CI/CD',
+    'Node.js, NestJS, Express, TypeScript',
+    'React, Vite, Tailwind CSS',
+    'PostgreSQL, MySQL, MongoDB, Redis',
+    'Spring Boot, Java, JWT auth',
   ],
 }
 
 export const skills = [
   {
-    group: 'Frontend',
-    items: ['React', 'JavaScript (ES2023)', 'TypeScript', 'Tailwind CSS', 'Vite', 'HTML/CSS'],
+    group: 'Languages',
+    items: ['JavaScript', 'TypeScript', 'Java (Core, OOP)', 'SQL', 'Python', 'C'],
   },
   {
     group: 'Backend',
-    items: ['Node.js', 'Express', 'REST APIs', 'JWT Auth', 'Zod validation'],
+    items: [
+      'Node.js',
+      'NestJS',
+      'Express.js',
+      'Spring Boot',
+      'Spring MVC',
+      'Spring Security',
+      'REST APIs',
+      'JWT Auth',
+      'Microservices',
+    ],
   },
   {
-    group: 'Data',
-    items: ['PostgreSQL', 'MongoDB', 'Firebase', 'Redis', 'SQL'],
+    group: 'Frontend',
+    items: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'Vite'],
   },
   {
-    group: 'Tooling',
-    items: ['Git & GitHub', 'Docker', 'Vitest', 'GitHub Actions', 'Vercel', 'Linux'],
+    group: 'Databases & ORM',
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'TypeORM', 'Mongoose', 'Hibernate / JPA'],
+  },
+  {
+    group: 'Testing & Tools',
+    items: [
+      'Jest',
+      'Vitest',
+      'Playwright',
+      'Supertest',
+      'Postman',
+      'Git',
+      'GitHub',
+      'Maven',
+      'Agile / Scrum',
+      'Linux',
+    ],
   },
 ]
 
 export const projects = [
   {
+    title: 'Watch Strap Platform',
+    blurb:
+      'Full-stack e-commerce store with "Find My Strap": shoppers pick their watch — brand, series, model, size — and see only straps that fit, using lug-width matching and explicit smartwatch compatibility rules. Checkout cannot oversell: atomic stock decrement, all-or-nothing order transactions and idempotency keys.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
+    year: '2025',
+    href: '',
+    repo: 'https://github.com/asifghaus350/Watch-strap-Platform',
+    featured: true,
+  },
+  {
     title: 'HelpDesk Ticket Management System',
     blurb:
-      'A role-based support desk where agents triage, assign and resolve tickets with SLA timers, audit trails and live dashboard analytics.',
+      'Role-based support desk where agents triage, assign and resolve tickets, with SLA timers, audit trails and live dashboard analytics for support teams.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
     year: '2026',
-    href: '#',
-    repo: '#',
+    href: '',
+    repo: '',
     featured: true,
   },
   {
-    title: 'Project Two',
+    title: 'Student Library Management System',
     blurb:
-      'Short, outcome-focused description. What problem did it solve, and what was the measurable result? Keep it to two lines.',
-    tags: ['React', 'Firebase'],
-    year: '2025',
-    href: '#',
-    repo: '#',
-    featured: true,
-  },
-  {
-    title: 'Project Three',
-    blurb:
-      'Another project. Mention the tricky part you solved — that is what interviewers ask about.',
-    tags: ['Next.js', 'MongoDB'],
-    year: '2025',
-    href: '#',
-    repo: '#',
+      'Secure backend service for authentication, book management and transactions, with JWT-based REST APIs, request validation and centralized exception handling. Optimized the relational schema and Hibernate queries, cutting query execution time by 30%.',
+    tags: ['Spring Boot', 'Spring Security', 'MySQL', 'Hibernate'],
+    year: '2024',
+    href: '',
+    repo: '',
     featured: false,
   },
 ]
 
 export const experience = [
   {
-    role: 'Full-Stack Developer',
-    company: 'Company Name',
-    period: '2024 — Present',
+    role: 'Associate Software Developer',
+    company: 'Alt-Switch Software Services',
+    period: 'Aug 2026 — Present',
     points: [
-      'Built and shipped X feature that reduced Y by Z%.',
-      'Owned the migration from A to B with zero downtime.',
-      'Mentored two juniors and set up the team code review checklist.',
+      'Develop and maintain backend modules for an ERP / wholesale distribution platform using NestJS, TypeScript, TypeORM, PostgreSQL and Redis.',
+      'Fixed price-list lifecycle bugs so draft, archived and reactivated price lists keep the correct status.',
+      'Resolved an HTTP 500 in the customer price item search that occurred when no sort column was applied.',
+      'Improved Advance Shipping Notice (ASN) details to show readable payment term names instead of internal IDs.',
+      'Test and support the admin dashboard, a warehouse management Android app and a POS system across releases, using Git feature branches, pull requests and staging deployments.',
     ],
   },
   {
-    role: 'Frontend Developer',
-    company: 'Company Name',
-    period: '2022 — 2024',
+    role: 'Junior Software Engineer',
+    company: 'Wipro',
+    period: 'Dec 2025 — Jul 2026',
     points: [
-      'Rebuilt the dashboard in React, cutting time-to-interactive in half.',
-      'Introduced a design-token system adopted across four products.',
+      'Developed and maintained web application features using JavaScript, HTML and CSS within the development team.',
+      'Integrated REST APIs, fixed bugs and supported testing across releases, following Agile sprints and Git workflows.',
+    ],
+  },
+  {
+    role: 'Software Development Intern',
+    company: 'Meta-Cyrus Technology (Remote)',
+    period: 'Dec 2024 — Feb 2025',
+    points: [
+      'Built backend components and RESTful APIs with Node.js and Express for 3+ full-stack applications, improving server response time by 25%.',
+      'Integrated real-time database features and turned requirements into working solutions in a cross-functional remote team.',
     ],
   },
 ]
 
 export const education = {
-  degree: 'BS Computer Science',
-  school: 'University Name',
-  period: '2018 — 2022',
+  degree: 'B.Tech in Computer Science',
+  school: 'Maulana Azad National Urdu University (MANUU), Hyderabad',
+  period: '2021 — 2025',
+  detail: 'CGPA 6.9 / 10',
 }
+
+export const certifications = [
+  { label: 'Java — HackerRank' },
+  { label: 'SQL — HackerRank' },
+]
+
+export const languages = ['English', 'Hindi', 'Urdu']
 
 export const navLinks = [
   { label: 'About', href: '#about' },

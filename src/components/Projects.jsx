@@ -1,4 +1,4 @@
-import { projects } from '../data/portfolio.js'
+import { projects, socials } from '../data/portfolio.js'
 import Icon from './Icons.jsx'
 import Reveal from './Reveal.jsx'
 import SectionHeading from './SectionHeading.jsx'
@@ -67,6 +67,8 @@ function ProjectCard({ project, index }) {
 }
 
 export default function Projects() {
+  const github = socials.find((s) => s.icon === 'github')?.href
+
   return (
     <section id="work" className="section relative">
       <div
@@ -82,7 +84,7 @@ export default function Projects() {
           />
           <Reveal delay={150}>
             <a
-              href="https://github.com/your-username"
+              href={github}
               target="_blank"
               rel="noreferrer"
               className="btn btn-ghost text-sm"
