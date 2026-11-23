@@ -26,10 +26,26 @@ export default function Experience() {
                     {job.role}
                   </h3>
                   <span className="text-sm text-brand-2">{job.company}</span>
+                  {job.period.includes('Present') ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 font-mono text-[10px] text-emerald-300">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      Current
+                    </span>
+                  ) : null}
                   <span className="ml-auto font-mono text-[11px] text-slate-600">
                     {job.period}
                   </span>
                 </div>
+
+                {job.tags?.length ? (
+                  <ul className="mt-3 flex flex-wrap gap-1.5">
+                    {job.tags.map((t) => (
+                      <li key={t} className="chip !text-[10.5px]">
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
 
                 <ul className="mt-4 space-y-2.5">
                   {job.points.map((point) => (

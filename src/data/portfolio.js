@@ -23,7 +23,8 @@ export const profile = {
   availability: 'Open to Backend & Full Stack roles',
   email: 'asifghaus350@gmail.com',
   phone: '+91 84394 51992',
-  resumeUrl: '/resume.pdf',
+  // BASE_URL se GitHub Pages (/portfolio/) par bhi link sahi chalega
+  resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
 }
 
 export const socials = [
@@ -104,7 +105,12 @@ export const projects = [
   {
     title: 'Watch Strap Platform',
     blurb:
-      'Full-stack e-commerce store with "Find My Strap": shoppers pick their watch — brand, series, model, size — and see only straps that fit, using lug-width matching and explicit smartwatch compatibility rules. Checkout cannot oversell: atomic stock decrement, all-or-nothing order transactions and idempotency keys.',
+      'Full-stack e-commerce store where shoppers pick their watch (brand, series, model, size) and see only the straps that actually fit.',
+    highlights: [
+      '"Find My Strap" fit matching by lug width, plus explicit smartwatch compatibility rules',
+      'Checkout that cannot oversell: atomic stock decrement and all-or-nothing order transactions',
+      'Idempotency keys so a retried request never creates a duplicate order',
+    ],
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
     year: '2025',
     href: '',
@@ -114,7 +120,12 @@ export const projects = [
   {
     title: 'HelpDesk Ticket Management System',
     blurb:
-      'Role-based support desk where agents triage, assign and resolve tickets, with SLA timers, audit trails and live dashboard analytics for support teams.',
+      'Role-based support desk where agents triage, assign and resolve customer tickets.',
+    highlights: [
+      'SLA timers on every ticket so nothing quietly breaches',
+      'Audit trail of each status change and assignment',
+      'Live dashboard analytics for support teams',
+    ],
     tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
     year: '2026',
     href: '',
@@ -124,7 +135,12 @@ export const projects = [
   {
     title: 'Student Library Management System',
     blurb:
-      'Secure backend service for authentication, book management and transactions, with JWT-based REST APIs, request validation and centralized exception handling. Optimized the relational schema and Hibernate queries, cutting query execution time by 30%.',
+      'Secure backend service for authentication, book management and lending transactions.',
+    highlights: [
+      'JWT-secured REST APIs with Spring Security',
+      'Request validation and centralized exception handling',
+      'Schema and Hibernate query tuning cut query time by 30%',
+    ],
     tags: ['Spring Boot', 'Spring Security', 'MySQL', 'Hibernate'],
     year: '2024',
     href: '',
@@ -138,6 +154,7 @@ export const experience = [
     role: 'Associate Software Developer',
     company: 'Alt-Switch Software Services',
     period: 'Aug 2026 — Present',
+    tags: ['NestJS', 'TypeScript', 'TypeORM', 'PostgreSQL', 'Redis', 'Jest', 'Playwright'],
     points: [
       'Develop and maintain backend modules for an ERP / wholesale distribution platform using NestJS, TypeScript, TypeORM, PostgreSQL and Redis.',
       'Fixed price-list lifecycle bugs so draft, archived and reactivated price lists keep the correct status.',
@@ -150,6 +167,7 @@ export const experience = [
     role: 'Junior Software Engineer',
     company: 'Wipro',
     period: 'Dec 2025 — Jul 2026',
+    tags: ['JavaScript', 'HTML', 'CSS', 'REST APIs', 'Git'],
     points: [
       'Developed and maintained web application features using JavaScript, HTML and CSS within the development team.',
       'Integrated REST APIs, fixed bugs and supported testing across releases, following Agile sprints and Git workflows.',
@@ -159,6 +177,7 @@ export const experience = [
     role: 'Software Development Intern',
     company: 'Meta-Cyrus Technology (Remote)',
     period: 'Dec 2024 — Feb 2025',
+    tags: ['Node.js', 'Express', 'REST APIs'],
     points: [
       'Built backend components and RESTful APIs with Node.js and Express for 3+ full-stack applications, improving server response time by 25%.',
       'Integrated real-time database features and turned requirements into working solutions in a cross-functional remote team.',

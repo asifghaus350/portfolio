@@ -56,11 +56,35 @@ function ProjectCard({ project, index }) {
           )}
         </h3>
 
-        <p className="mt-2.5 flex-1 text-[13.5px] leading-relaxed text-slate-400">
+        <p className="mt-2.5 text-[13.5px] leading-relaxed text-slate-400">
           {project.blurb}
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-1.5">
+        {project.highlights?.length ? (
+          <ul className="mt-4 space-y-2 border-t border-line pt-4">
+            {project.highlights.map((h) => (
+              <li key={h} className="flex gap-2.5 text-[13px] leading-snug text-slate-300">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-2"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m5 12 5 5L20 7"
+                  />
+                </svg>
+                {h}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        <ul className="mt-auto flex flex-wrap gap-1.5 pt-5">
           {project.tags.map((tag) => (
             <li key={tag} className="chip !text-[10.5px]">
               {tag}
