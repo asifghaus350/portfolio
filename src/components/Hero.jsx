@@ -127,7 +127,7 @@ export default function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
                 <span className="ml-3 font-mono text-[11px] text-slate-500">
-                  developer.js
+                  developer.ts
                 </span>
               </div>
 
@@ -140,11 +140,16 @@ export default function Hero() {
                   <span className="text-emerald-300">&apos;{profile.name}&apos;</span>,
                   {'\n'}  <span className="text-brand-2">role</span>:{' '}
                   <span className="text-emerald-300">&apos;{profile.role}&apos;</span>,
-                  {'\n'}  <span className="text-brand-2">stack</span>: [
+                  {'\n'}  <span className="text-brand-2">backend</span>: [
+                  <span className="text-emerald-300">&apos;NestJS&apos;</span>,{' '}
+                  <span className="text-emerald-300">&apos;PostgreSQL&apos;</span>],
+                  {'\n'}  <span className="text-brand-2">frontend</span>: [
                   <span className="text-emerald-300">&apos;React&apos;</span>,{' '}
-                  <span className="text-emerald-300">&apos;Node&apos;</span>],
-                  {'\n'}  <span className="text-brand-2">focus</span>:{' '}
-                  <span className="text-emerald-300">&apos;shipping&apos;</span>,
+                  <span className="text-emerald-300">&apos;Tailwind&apos;</span>],
+                  {'\n'}  <span className="text-brand-2">testsWritten</span>:{' '}
+                  <span className="text-brand-3">900</span>,
+                  {'\n'}  <span className="text-brand-2">based</span>:{' '}
+                  <span className="text-emerald-300">&apos;{profile.location}&apos;</span>,
                   {'\n'}  <span className="text-brand-2">openToWork</span>:{' '}
                   <span className="text-brand-3">true</span>,
                   {'\n'}
@@ -161,7 +166,7 @@ export default function Hero() {
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   main
                 </span>
-                <span>UTF-8 · JavaScript</span>
+                <span>UTF-8 · TypeScript</span>
               </div>
             </div>
           </div>
