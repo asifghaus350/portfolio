@@ -40,7 +40,7 @@ export const socials = [
 export const stats = [
   { value: '1+', label: 'Year of professional experience' },
   { value: '900+', label: 'Automated tests written' },
-  { value: '3', label: 'Shipped full-stack projects' },
+  { value: '4', label: 'Projects built and shipped' },
 ]
 
 export const about = {
@@ -129,8 +129,23 @@ export const projects = [
     tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
     year: '2026',
     href: '',
-    repo: '',
+    repo: 'https://github.com/asifghaus350/helpdesk-management-system',
     featured: true,
+  },
+  {
+    title: 'Amazon India Homepage Clone',
+    blurb:
+      'Responsive Amazon India storefront built from scratch in plain HTML, CSS and JavaScript, with no framework and no build step.',
+    highlights: [
+      'Live search with a department category filter',
+      'Add-to-cart with a mini cart that persists in localStorage',
+      'Sign-in / create-account demo flow stored in the browser',
+    ],
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'localStorage'],
+    year: '2026',
+    href: 'https://asifghaus350.github.io/Amazone_clone/',
+    repo: 'https://github.com/asifghaus350/Amazone_clone',
+    featured: false,
   },
   {
     title: 'Student Library Management System',
